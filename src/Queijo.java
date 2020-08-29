@@ -1,21 +1,12 @@
 
-public class Queijo extends Sanduiche{
+public class Queijo extends Recheio{
 	
 	private Sanduiche sanduiche;
 	
 	public Queijo(Sanduiche sanduiche) {
-		this.sanduiche = sanduiche;
-	}
-
-	@Override
-	double mostrarPreco() {
+		super(sanduiche);
+		this.nome = "Queijo, ";
+		this.preco = 1.5;
 		
-		return sanduiche.mostrarPreco() + 1.50;
 	}
-
-	@Override
-	String mostrarIngredientes() {
-		return sanduiche.mostrarIngredientes() + ", queijo";
-	}
-
 }
